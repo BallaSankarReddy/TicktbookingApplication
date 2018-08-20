@@ -42,6 +42,7 @@ public class TicketBookingController {
     public String homepage(){
         return "index";
     }	
+	
 	@GetMapping("/welcome")
 	public String retrieveWelcomeMessage() {
 		
