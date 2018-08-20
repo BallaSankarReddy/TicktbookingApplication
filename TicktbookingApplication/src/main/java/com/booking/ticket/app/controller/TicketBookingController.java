@@ -57,8 +57,8 @@ public class TicketBookingController {
 		this.ticket.setDest_station("ATP");
 		this.ticket.setSource_station("Chennai");
 		this.ticket.setEmail("sankar.scb@gmail.com");*/
-		
 		System.out.println("################ Creating Booking Ticket ######### ");
+		
 		System.out.println("Ticket ID :: "+ticket.getTicketId());
 		return ticketBookingServers.createTicket(ticket);
 	}
