@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.booking.ticket.app.dao.TicketBookingDao;
@@ -37,8 +38,13 @@ public class TicketBookingController {
 		return "Hello...";
 	}
 
+	@RequestMapping(value="/index",method = RequestMethod.GET)
+    public String homepage(){
+        return "index";
+    }
 	@GetMapping("/welcome")
 	public String retrieveWelcomeMessage() {
+		
 		// Complex Method
 		return welcomeMessage;
 	}
@@ -46,11 +52,11 @@ public class TicketBookingController {
 	@PostMapping(value = "/create")
 	// /api/tickets/create
 	public Ticket createTicket(@RequestBody Ticket ticket) {
-		this.ticket.setBookingDate(new Date());
+		/*this.ticket.setBookingDate(new Date());
 		this.ticket.setPassgerName("AP_Passbger");
 		this.ticket.setDest_station("ATP");
 		this.ticket.setSource_station("Chennai");
-		this.ticket.setEmail("sankar.scb@gmail.com");
+		this.ticket.setEmail("sankar.scb@gmail.com");*/
 		return ticketBookingServers.createTicket(ticket);
 	}
 
