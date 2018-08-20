@@ -41,8 +41,7 @@ public class TicketBookingController {
 	@RequestMapping(value="/index",method = RequestMethod.GET)
     public String homepage(){
         return "index";
-    }
-	
+    }	
 	@GetMapping("/welcome")
 	public String retrieveWelcomeMessage() {
 		
